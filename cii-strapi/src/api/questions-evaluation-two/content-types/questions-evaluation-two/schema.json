@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions_evaluation_twos",
+  "info": {
+    "singularName": "questions-evaluation-two",
+    "pluralName": "questions-evaluation-twos",
+    "displayName": "QuestionsEvaluationTwo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer_evaluation_twos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::answer-evaluation-two.answer-evaluation-two",
+      "mappedBy": "questions_evaluation_twos"
+    }
+  }
+}

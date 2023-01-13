@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "answer_evaluation_twos",
+  "info": {
+    "singularName": "answer-evaluation-two",
+    "pluralName": "answer-evaluation-twos",
+    "displayName": "AnswerEvaluationTwo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "answer": {
+      "type": "string",
+      "regex": "/^[1-5]$/",
+      "required": true
+    },
+    "questions_evaluation_twos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::questions-evaluation-two.questions-evaluation-two",
+      "inversedBy": "answer_evaluation_twos"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "answer_evaluation_twos"
+    }
+  }
+}

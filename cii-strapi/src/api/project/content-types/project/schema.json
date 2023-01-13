@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Empresarial",
+        "Social",
+        "Proyecto de tecnologías de la información y proyectos de invenciones",
+        "Medio ambiental"
+      ]
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "project"
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "resplettter": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "projectFile": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "pitch": {
+      "type": "string"
+    },
+    "status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::status.status"
+    },
+    "answer_evaluation_ones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answer-evaluation-one.answer-evaluation-one",
+      "mappedBy": "project"
+    },
+    "answer_evaluation_twos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answer-evaluation-two.answer-evaluation-two",
+      "mappedBy": "project"
+    }
+  }
+}

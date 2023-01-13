@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions_evaluation_ones",
+  "info": {
+    "singularName": "questions-evaluation-one",
+    "pluralName": "questions-evaluation-ones",
+    "displayName": "QuestionsEvaluationOne"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer_evaluation_ones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::answer-evaluation-one.answer-evaluation-one",
+      "inversedBy": "questions_evaluation_ones"
+    }
+  }
+}

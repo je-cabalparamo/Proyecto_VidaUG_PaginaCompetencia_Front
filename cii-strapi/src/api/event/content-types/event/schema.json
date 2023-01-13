@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dInit": {
+      "type": "date",
+      "required": true
+    },
+    "dFinish": {
+      "type": "date",
+      "required": true
+    },
+    "dRespCategoryInit": {
+      "type": "date",
+      "required": true
+    },
+    "dRespCategoryFinish": {
+      "type": "date",
+      "required": true
+    },
+    "courseName1": {
+      "type": "string",
+      "required": true
+    },
+    "urlCourse1": {
+      "type": "string",
+      "required": true
+    },
+    "courseName2": {
+      "type": "string",
+      "required": true
+    },
+    "urlCourse2": {
+      "type": "string",
+      "required": true
+    },
+    "dPitchFinish": {
+      "type": "date",
+      "required": true
+    },
+    "dEval1Init": {
+      "type": "date",
+      "required": true
+    },
+    "dEval1Finish": {
+      "type": "date",
+      "required": true
+    },
+    "dPubSemifinalist": {
+      "type": "date",
+      "required": true
+    },
+    "dEval2Init": {
+      "type": "date",
+      "required": true
+    },
+    "dEval2Finish": {
+      "type": "date",
+      "required": true
+    },
+    "dPubFinalist": {
+      "type": "date",
+      "required": true
+    },
+    "eventFile": {
+      "allowedTypes": [
+        "files",
+        "videos",
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "numberWinnersPreparatory": {
+      "type": "integer",
+      "required": true
+    },
+    "numberWinnersBachelors": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

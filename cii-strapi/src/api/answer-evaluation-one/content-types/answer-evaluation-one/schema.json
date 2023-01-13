@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "answer_evaluation_ones",
+  "info": {
+    "singularName": "answer-evaluation-one",
+    "pluralName": "answer-evaluation-ones",
+    "displayName": "AnswerEvaluationOne"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "answer": {
+      "type": "string",
+      "regex": "/^[1-5]$/",
+      "required": true
+    },
+    "questions_evaluation_ones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::questions-evaluation-one.questions-evaluation-one",
+      "inversedBy": "answer_evaluation_ones"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "answer_evaluation_ones"
+    }
+  }
+}
